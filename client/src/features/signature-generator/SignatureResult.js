@@ -26,6 +26,7 @@ export class SignatureResult extends Component {
                 alt="logo"
                 width="81"
                 class="CToWUd"
+                style="margin-left: 15px;"
               />
             </td>
             <td style="width:30px" width="30">
@@ -42,7 +43,7 @@ export class SignatureResult extends Component {
                   target="_blank"
                 >
                   <span style="color:rgb(233,66,53)">m.</span>
-                  &nbsp; ${this.props.signatureGenerator.phone}
+                  &nbsp; ${this.props.signatureGenerator.phone.replace(/[^0-9]/g, '').match(/\d{3}(?=\d{2,3})|\d+/g).join(".")}
                 </a>
                 &nbsp;
                 <a
