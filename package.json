@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "description": "signature-generator created by Rekit.",
-  "keywords": ["rekit"],
+  "keywords": [
+    "rekit"
+  ],
   "rekit": {
     "devPort": 6075,
     "studioPort": 6076,
@@ -14,9 +16,7 @@
   "scripts": {
     "start": "node ./tools/server.js",
     "build": "node ./tools/build.js",
-    "test": "node ./tools/run_test.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "test": "node ./tools/run_test.js"
   },
   "devDependencies": {
     "argparse": "^1.0.7",
@@ -45,7 +45,6 @@
     "express": "^4.16.2",
     "express-history-api-fallback": "^2.2.1",
     "file-loader": "^1.1.6",
-    "gh-pages": "^1.1.0",
     "history": "^4.7.2",
     "jsdom": "^11.5.1",
     "less": "^2.7.3",
