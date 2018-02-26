@@ -17,6 +17,7 @@ export class SignatureData extends Component {
   };
 
   render() {
+    const { setName, setTitle, setPhone, setEmail, setLinkedIn, setTwitter } = this.props.actions;
     return (
       <div className="signature-generator-signature-data">
         <h1>Signature Generator</h1>
@@ -28,7 +29,7 @@ export class SignatureData extends Component {
                 type="text"
                 id="name"
                 onChange={e => {
-                  this.props.actions.setName(e.target.value);
+                  setName(e.target.value);
                   this.hideResult();
                 }}
               />
@@ -40,7 +41,7 @@ export class SignatureData extends Component {
                 type="text"
                 id="title"
                 onChange={e => {
-                  this.props.actions.setTitle(e.target.value);
+                  setTitle(e.target.value);
                   this.hideResult();
                 }}
               />
@@ -52,7 +53,7 @@ export class SignatureData extends Component {
                 type="tel"
                 id="phone"
                 onChange={e => {
-                  this.props.actions.setPhone(e.target.value);
+                  setPhone(e.target.value);
                   this.hideResult();
                 }}
               />
@@ -66,7 +67,7 @@ export class SignatureData extends Component {
                 type="email"
                 id="email"
                 onChange={e => {
-                  this.props.actions.setEmail(e.target.value);
+                  setEmail(e.target.value);
                   this.hideResult();
                 }}
               />
@@ -78,7 +79,7 @@ export class SignatureData extends Component {
                 type="text"
                 id="linkedIn"
                 onChange={e => {
-                  this.props.actions.setLinkedIn(e.target.value);
+                  setLinkedIn(e.target.value);
                   this.hideResult();
                 }}
               />
@@ -90,7 +91,7 @@ export class SignatureData extends Component {
                 type="text"
                 id="twitter"
                 onChange={e => {
-                  this.props.actions.setTwitter(e.target.value);
+                  setTwitter(e.target.value);
                   this.hideResult();
                 }}
               />

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actions from './redux/actions';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 export class SignatureResult extends Component {
   static propTypes = {
@@ -12,6 +11,7 @@ export class SignatureResult extends Component {
   };
 
   renderText() {
+    const { name, title, phone, email, linkedIn, twitter } = this.props.signatureGenerator;
     return `<table
         border="0"
         cellpadding="0"
@@ -34,30 +34,37 @@ export class SignatureResult extends Component {
             </td>
             <td style="line-height:26px">
               <div style="height:30px">&nbsp;</div>
-              <div style="font-size:18px;font-weight:600">${this.props.signatureGenerator.name}</div>
-              <div style="text-transform:uppercase;font-size:14px">${this.props.signatureGenerator.title}</div>
+              <div style="font-size:18px;font-weight:600">${name}</div>
+              <div style="text-transform:uppercase;font-size:14px">${title}</div>
               <div>
                 <a
-                  href="tel:${this.props.signatureGenerator.phone.replace(/[^0-9]/g, '')}"
+                  href="tel:${phone.replace(/[^0-9]/g, '')}"
                   style="color:rgb(52,63,79);padding-right:10px;text-decoration:none"
                   target="_blank"
                 >
                   <span style="color:rgb(233,66,53)">m.</span>
-                  &nbsp; ${this.props.signatureGenerator.phone.replace(/[^0-9]/g, '').match(/\d{3}(?=\d{2,3})|\d+/g).join(".")}
+                  &nbsp; ${
+                    phone
+                      ? phone
+                          .replace(/[^0-9]/g, '')
+                          .match(/\d{3}(?=\d{2,3})|\d+/g)
+                          .join('.')
+                      : ''
+                  }
                 </a>
                 &nbsp;
                 <a
-                  href="mailto:${this.props.signatureGenerator.email}"
+                  href="mailto:${email}"
                   style="color:rgb(52,63,79);text-decoration:none"
                   target="_blank"
                 >
                   <span style="color:rgb(233,66,53)">e.</span>
-                  &nbsp; ${this.props.signatureGenerator.email}
+                  &nbsp; ${email}
                 </a>
               </div>
               <div>
                 <a
-                  href="https://www.linkedin.com/in/${this.props.signatureGenerator.linkedIn}"
+                  href="https://www.linkedin.com/in/${linkedIn}"
                   style="color:rgb(52,63,79);padding-right:10px;text-decoration:none"
                   target="_blank"
                 >
@@ -68,10 +75,10 @@ export class SignatureResult extends Component {
                     width="14"
                     class="CToWUd"
                   />
-                  &nbsp;/in/${this.props.signatureGenerator.linkedIn}&nbsp;
+                  &nbsp;/in/${linkedIn}&nbsp;
                 </a>
                 <a
-                  href="https://twitter.com/${this.props.signatureGenerator.twitter}"
+                  href="https://twitter.com/${twitter}"
                   style="color:rgb(52,63,79);text-decoration:none"
                   target="_blank"
                 >
@@ -82,7 +89,7 @@ export class SignatureResult extends Component {
                     width="14"
                     class="CToWUd"
                   />
-                  &nbsp;${this.props.signatureGenerator.twitter}
+                  &nbsp;${twitter}
                 </a>
               </div>
               <div style="height:30px">&nbsp;</div>
@@ -93,13 +100,19 @@ export class SignatureResult extends Component {
   }
 
   render() {
+    const { phone, result } = this.props.signatureGenerator;
+    const { setResult, showResult } = this.props.actions;
     return (
       <div className="signature-generator-signature-result">
         <button
           className="generate"
           onClick={() => {
-            this.props.actions.setResult(this.renderText());
-            this.props.actions.showResult();
+            if (!phone.replace(/[^0-9]/g, '')) {
+              alert('Not a valid phone number.');
+              return;
+            }
+            setResult(this.renderText());
+            showResult();
           }}
         >
           Generate
@@ -107,7 +120,7 @@ export class SignatureResult extends Component {
 
         <div
           className="signature-generator-signature-result-display"
-          dangerouslySetInnerHTML={{ __html: this.props.signatureGenerator.result }}
+          dangerouslySetInnerHTML={{ __html: result }}
         />
       </div>
     );
