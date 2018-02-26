@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "description": "signature-generator created by Rekit.",
-  "homepage": "https://8base.github.io/email-signature-generator",
   "keywords": ["rekit"],
   "rekit": {
     "devPort": 6075,
