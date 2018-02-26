@@ -1,0 +1,32 @@
+@import '../../styles/mixins';
+
+.signature-generator-signature-result {
+  text-align: center;
+
+  button {
+    display: block;
+    margin: 0 auto;
+    border-radius: 2px;
+    padding: 3px 6px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .generate {
+    margin-bottom: 25px;
+  }
+
+  .signature-generator-signature-result-display {
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  @media screen and (min-width: 700px) {
+    .signature-generator-signature-result-display {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

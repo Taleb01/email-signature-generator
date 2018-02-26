@@ -1,0 +1,9 @@
+export { setName } from './setName';
+export { setTitle } from './setTitle';
+export { setPhone } from './setPhone';
+export { setEmail } from './setEmail';
+export { setLinkedIn } from './setLinkedIn';
+export { setTwitter } from './setTwitter';
+export { showResult } from './showResult';
+export { hideResult } from './hideResult';
+export { setResult } from './setResult';
