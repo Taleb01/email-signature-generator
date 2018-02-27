@@ -89,7 +89,7 @@ export class SignatureResult extends Component {
                     width="14"
                     class="CToWUd"
                   />
-                  &nbsp;${twitter}
+                  &nbsp;@${twitter.replace(/@/g, '')}
                 </a>
               </div>
               <div style="height:30px">&nbsp;</div>
@@ -98,6 +98,14 @@ export class SignatureResult extends Component {
         </tbody>
       </table>`;
   }
+
+  copyToClipboard = el => {
+    const range = document.createRange(); // create new range object
+    range.selectNodeContents(el); // set range to encompass desired element text
+    const selection = window.getSelection(); // get Selection object from currently user selected text
+    selection.removeAllRanges(); // unselect any user selected text (if any)
+    selection.addRange(range); // add range to Selection object to select it
+  };
 
   render() {
     const { phone, result } = this.props.signatureGenerator;
@@ -118,10 +126,19 @@ export class SignatureResult extends Component {
           Generate
         </button>
 
-        <div
-          className="signature-generator-signature-result-display"
-          dangerouslySetInnerHTML={{ __html: result }}
-        />
+        <div className="signature-generator-signature-result-display" dangerouslySetInnerHTML={{ __html: result }} />
+        <button
+          style={{ display: result ? 'inline-block' : 'none' }}
+          onClick={() => {
+            const el = document.querySelector(
+              '#react-root > div > div > div.signature-generator-signature-result > div > table'
+            );
+            this.copyToClipboard(el);
+            document.execCommand('copy');
+          }}
+        >
+          Copy
+        </button>
       </div>
     );
   }
