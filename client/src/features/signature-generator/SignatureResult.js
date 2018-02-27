@@ -36,7 +36,7 @@ export class SignatureResult extends Component {
               <div style="height:30px">&nbsp;</div>
               <div style="font-size:18px;font-weight:600">${name}</div>
               <div style="text-transform:uppercase;font-size:14px">${title}</div>
-              <div>
+              <div style="font-size:14px">
                 <a
                   href="tel:${phone.replace(/[^0-9]/g, '')}"
                   style="color:rgb(52,63,79);padding-right:10px;text-decoration:none"
@@ -62,7 +62,7 @@ export class SignatureResult extends Component {
                   &nbsp; ${email}
                 </a>
               </div>
-              <div>
+              <div style="font-size:14px">
                 <a
                   href="https://www.linkedin.com/in/${linkedIn}"
                   style="color:rgb(52,63,79);padding-right:10px;text-decoration:none"
