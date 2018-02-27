@@ -125,8 +125,6 @@ export class SignatureResult extends Component {
         >
           Generate
         </button>
-
-        <div className="signature-generator-signature-result-display" dangerouslySetInnerHTML={{ __html: result }} />
         <button
           style={{ display: result ? 'inline-block' : 'none' }}
           onClick={() => {
@@ -139,6 +137,8 @@ export class SignatureResult extends Component {
         >
           Copy
         </button>
+
+        <div className="signature-generator-signature-result-display" dangerouslySetInnerHTML={{ __html: result }} />
       </div>
     );
   }
