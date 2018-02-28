@@ -37,13 +37,14 @@ export class SignatureResult extends Component {
               <div style="font-size:18px;font-weight:600">${name}</div>
               <div style="text-transform:uppercase;font-size:14px">${title}</div>
               <div style="font-size:14px">
-              <span style="color:rgb(233,66,53)">m.</span>
+                <span style="color:rgb(233,66,53)">m.</span>
+                &nbsp;
                 <a
                   href="tel:${phone.replace(/[^0-9]/g, '')}"
                   style="color:rgb(52,63,79);padding-right:10px;text-decoration:none"
                   target="_blank"
                 >
-                  &nbsp; ${
+                  ${
                     phone
                       ? phone
                           .replace(/[^0-9]/g, '')
@@ -54,42 +55,46 @@ export class SignatureResult extends Component {
                 </a>
                 &nbsp;
                 <span style="color:rgb(233,66,53)">e.</span>
+                &nbsp;
                 <a
                   href="mailto:${email}"
                   style="color:rgb(52,63,79);text-decoration:none"
                   target="_blank"
                 >
-                  &nbsp; ${email}
+                  ${email}
                 </a>
               </div>
               <div style="font-size:14px">
-                  <img
-                    src="https://ci6.googleusercontent.com/proxy/ejo72VgOXJBs3smfFpN0WkiVXKZOcZWHSKpfcW3hJCs7mEVYlsySITBmMcn9fJhgPBht04XeUgB35qXbVyqNggaqB-M6Lp0G2CVqsYBAlRsnEYqHfjTtJqqhik58cA1r7-TasjATh0sAYdQJFiK50rsPGshVJbx-VlORTtpJZ_c8xmCrjf4a3fw1K-eIdjyJ1ftE0yAHDAQQphSezoui1Q=s0-d-e1-ft#https://docs.google.com/uc?export=download&amp;id=1hO6I9DlNsCWGBTO-rLIHCiyVpxreEBmB&amp;revid=0BxKTdJnCbLzfcERzSE5aME9XQzJXZnpNUlBVckNBRGkrZlk0PQ"
-                    alt="LinkedIn"
-                    style="padding-right:5px"
-                    width="14"
-                    class="CToWUd"
-                  />
+                <img
+                  src="https://ci6.googleusercontent.com/proxy/ejo72VgOXJBs3smfFpN0WkiVXKZOcZWHSKpfcW3hJCs7mEVYlsySITBmMcn9fJhgPBht04XeUgB35qXbVyqNggaqB-M6Lp0G2CVqsYBAlRsnEYqHfjTtJqqhik58cA1r7-TasjATh0sAYdQJFiK50rsPGshVJbx-VlORTtpJZ_c8xmCrjf4a3fw1K-eIdjyJ1ftE0yAHDAQQphSezoui1Q=s0-d-e1-ft#https://docs.google.com/uc?export=download&amp;id=1hO6I9DlNsCWGBTO-rLIHCiyVpxreEBmB&amp;revid=0BxKTdJnCbLzfcERzSE5aME9XQzJXZnpNUlBVckNBRGkrZlk0PQ"
+                  alt="LinkedIn"
+                  style="padding-right:5px"
+                  width="14"
+                  class="CToWUd"
+                />
+                &nbsp;
                 <a
                   href="https://www.linkedin.com/in/${linkedIn}"
                   style="color:rgb(52,63,79);padding-right:10px;text-decoration:none"
                   target="_blank"
                 >
-                  &nbsp;/in/${linkedIn}&nbsp;
+                  /in/${linkedIn}
                 </a>
-                  <img
-                    src="https://ci3.googleusercontent.com/proxy/nWPfVeCBuLYU6LCPNUSsqL8VXX2gnEpH9qtxlq4dKVLcS79UKd9qB3L7AwgrcllGvw1NzDXjDsrONO9Dagc2Cjxex_en3ATZC7dYFzyVMMmB9d8RtYjJTgJY7VKTAqTyhOQSi0mwqOri37BywgkRdGr7w8RsnAqqqZ3mdvjj4hTLuUItefkYOoOsX1MHysaGu9HgxdGnS0xXivpZpGdJrw=s0-d-e1-ft#https://docs.google.com/uc?export=download&amp;id=1ADpXElsi-DoEbeuD3td_rn1y3QRazC1S&amp;revid=0BxKTdJnCbLzfVDhxQk01dktIa2tDQVc1SDNURzhGK2V3NDBVPQ"
-                    alt="Twitter"
-                    style="padding-right:5px"
-                    width="14"
-                    class="CToWUd"
-                  />
+                &nbsp;
+                <img
+                  src="https://ci3.googleusercontent.com/proxy/nWPfVeCBuLYU6LCPNUSsqL8VXX2gnEpH9qtxlq4dKVLcS79UKd9qB3L7AwgrcllGvw1NzDXjDsrONO9Dagc2Cjxex_en3ATZC7dYFzyVMMmB9d8RtYjJTgJY7VKTAqTyhOQSi0mwqOri37BywgkRdGr7w8RsnAqqqZ3mdvjj4hTLuUItefkYOoOsX1MHysaGu9HgxdGnS0xXivpZpGdJrw=s0-d-e1-ft#https://docs.google.com/uc?export=download&amp;id=1ADpXElsi-DoEbeuD3td_rn1y3QRazC1S&amp;revid=0BxKTdJnCbLzfVDhxQk01dktIa2tDQVc1SDNURzhGK2V3NDBVPQ"
+                  alt="Twitter"
+                  style="padding-right:5px"
+                  width="14"
+                  class="CToWUd"
+                />
+                &nbsp;
                 <a
                   href="https://twitter.com/${twitter}"
                   style="color:rgb(52,63,79);text-decoration:none"
                   target="_blank"
                 >
-                  &nbsp;@${twitter.replace(/@/g, '')}
+                  @${twitter.replace(/@/g, '')}
                 </a>
               </div>
               <div style="height:30px">&nbsp;</div>
