@@ -28,7 +28,7 @@ export class SignatureResult extends Component {
       &nbsp;
       <a
         href="https://twitter.com/${twitter}"
-        style="color:rgb(52,63,79);letter-spacing:.5px;text-decoration:none"
+        style="color:rgb(52,63,79); letter-spacing:.5px; text-decoration:none"
         target="_blank"
       >
         @${twitter}
@@ -56,7 +56,7 @@ export class SignatureResult extends Component {
         &nbsp;
         <a
           href="https://www.linkedin.com/in/${linkedIn}"
-          style="display:inline-block;color:rgb(52,63,79);letter-spacing:.5px;margin-right:10px;text-decoration:none"
+          style="display:inline-block; color:rgb(52,63,79); letter-spacing:.5px; margin-right:10px; text-decoration:none"
           target="_blank"
         >
           /in/${linkedIn}
@@ -72,7 +72,7 @@ export class SignatureResult extends Component {
         border="0"
         cellpadding="0"
         cellspacing="0"
-        style="color:rgb(52,63,79);font-family:Poppins,sans-serif;font-size:medium;white-space:nowrap;width:600px"
+        style="color:rgb(52,63,79); font-family:Poppins,sans-serif; font-size:medium; white-space:nowrap; width:600px"
       >
         <tbody>
           <tr>
@@ -89,15 +89,15 @@ export class SignatureResult extends Component {
               &nbsp;
             </td>
             <td style="line-height:18px">
-              <div style="height:30px">&nbsp;</div>
-              <div style="font-size:13px;font-weight:600;letter-spacing:.5px;">${name}</div>
-              <div style="text-transform:uppercase;font-size:9px;letter-spacing:.75px">${title}</div>
+              <div style="height:28px">&nbsp;</div>
+              <div style="font-size:13px; font-weight:600; letter-spacing:.5px;">${name}</div>
+              <div style="text-transform:uppercase; font-size:9px; letter-spacing:.75px">${title}</div>
               <div style="font-size:10px">
                 <span style="color:rgb(233,66,53)">m.</span>
                 &nbsp;
                 <a
                   href="tel:${phone.replace(/[^0-9]/g, '')}"
-                  style="display:inline-block;color:rgb(52,63,79);letter-spacing:.5px;margin-right:10px;text-decoration:none"
+                  style="display:inline-block; color:rgb(52,63,79); letter-spacing:.5px; margin-right:10px; text-decoration:none"
                   target="_blank"
                 >
                   ${
@@ -113,7 +113,7 @@ export class SignatureResult extends Component {
                 &nbsp;
                 <a
                   href="mailto:${email}"
-                  style="color:rgb(52,63,79);letter-spacing:.5px;text-decoration:none"
+                  style="color:rgb(52,63,79); letter-spacing:.5px; text-decoration:none"
                   target="_blank"
                 >
                   ${email}
