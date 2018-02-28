@@ -56,7 +56,7 @@ export class SignatureResult extends Component {
         &nbsp;
         <a
           href="https://www.linkedin.com/in/${linkedIn}"
-          style="display:inline-block; color:rgb(52,63,79); letter-spacing:.5px; margin-right:10px; text-decoration:none"
+          style="display:inline-block; color:rgb(52,63,79); font-size: 10px; letter-spacing:.5px; margin-right:10px; text-decoration:none"
           target="_blank"
         >
           /in/${linkedIn}
@@ -97,7 +97,7 @@ export class SignatureResult extends Component {
                 &nbsp;
                 <a
                   href="tel:${phone.replace(/[^0-9]/g, '')}"
-                  style="display:inline-block; color:rgb(52,63,79); letter-spacing:.5px; margin-right:10px; text-decoration:none"
+                  style="display:inline-block; color:rgb(52,63,79); font-size: 10px; letter-spacing:.5px; margin-right:10px; text-decoration:none"
                   target="_blank"
                 >
                   ${
