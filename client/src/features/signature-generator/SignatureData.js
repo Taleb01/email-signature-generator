@@ -82,7 +82,7 @@ export class SignatureData extends Component {
               <input
                 type="text"
                 id="linkedIn"
-                placeholder="firstname-lastname-b6123"
+                placeholder="first-last-b6123"
                 onChange={e => {
                   setLinkedIn(e.target.value);
                   this.hideResult();
