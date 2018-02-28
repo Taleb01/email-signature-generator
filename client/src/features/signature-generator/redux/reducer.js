@@ -16,6 +16,7 @@ import { reducer as setTwitterReducer } from './setTwitter';
 import { reducer as showResultReducer } from './showResult';
 import { reducer as hideResultReducer } from './hideResult';
 import { reducer as setResultReducer } from './setResult';
+import { reducer as hideExampleReducer } from './hideExample';
 
 const reducers = [
   setNameReducer,
@@ -27,6 +28,7 @@ const reducers = [
   showResultReducer,
   hideResultReducer,
   setResultReducer,
+  hideExampleReducer,
 ];
 
 export default function reducer(state = initialState, action) {

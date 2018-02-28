@@ -7,3 +7,4 @@ export { setTwitter } from './setTwitter';
 export { showResult } from './showResult';
 export { hideResult } from './hideResult';
 export { setResult } from './setResult';
+export { hideExample } from './hideExample';

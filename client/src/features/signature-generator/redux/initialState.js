@@ -13,7 +13,16 @@ const initialState = {
   linkedIn: '',
   twitter: '',
   showResult: false,
+  showExample: true,
   result: '',
+  example: {
+    name: 'Example User',
+    title: 'Front End Developer',
+    phone: '123.456.7890',
+    email: 'ExampleUser@8base.com',
+    linkedIn: 'first-last-b6123',
+    twitter: 'MyTwitterHandle'
+  }
 };
 
 export default initialState;

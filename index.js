@@ -10,6 +10,8 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/client/build/index.html"));
 });
 
+console.log(credentials);
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log("App started");

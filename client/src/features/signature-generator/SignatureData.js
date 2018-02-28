@@ -28,6 +28,7 @@ export class SignatureData extends Component {
               <input
                 type="text"
                 id="name"
+                placeholder="Example User"
                 onChange={e => {
                   setName(e.target.value);
                   this.hideResult();
@@ -40,6 +41,7 @@ export class SignatureData extends Component {
               <input
                 type="text"
                 id="title"
+                placeholder="Front End Developer"
                 onChange={e => {
                   setTitle(e.target.value);
                   this.hideResult();
@@ -52,6 +54,7 @@ export class SignatureData extends Component {
               <input
                 type="tel"
                 id="phone"
+                placeholder="123.456.7890"
                 onChange={e => {
                   setPhone(e.target.value);
                   this.hideResult();
@@ -66,6 +69,7 @@ export class SignatureData extends Component {
               <input
                 type="email"
                 id="email"
+                placeholder="ExampleUser@8base.com"
                 onChange={e => {
                   setEmail(e.target.value);
                   this.hideResult();
@@ -78,6 +82,7 @@ export class SignatureData extends Component {
               <input
                 type="text"
                 id="linkedIn"
+                placeholder="firstname-lastname-b6123"
                 onChange={e => {
                   setLinkedIn(e.target.value);
                   this.hideResult();
@@ -90,6 +95,7 @@ export class SignatureData extends Component {
               <input
                 type="text"
                 id="twitter"
+                placeholder="MyTwitterHandle"
                 onChange={e => {
                   setTwitter(e.target.value);
                   this.hideResult();
