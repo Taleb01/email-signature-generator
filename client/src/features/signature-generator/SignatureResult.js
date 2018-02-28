@@ -41,7 +41,7 @@ export class SignatureResult extends Component {
                 &nbsp;
                 <a
                   href="tel:${phone.replace(/[^0-9]/g, '')}"
-                  style="color:rgb(52,63,79);margin-right:10px;text-decoration:none"
+                  style="display:inline-block;color:rgb(52,63,79);margin-right:10px;text-decoration:none"
                   target="_blank"
                 >
                   ${
@@ -53,7 +53,6 @@ export class SignatureResult extends Component {
                       : ''
                   }
                 </a>
-                &nbsp;
                 <span style="color:rgb(233,66,53)">e.</span>
                 &nbsp;
                 <a
@@ -75,12 +74,11 @@ export class SignatureResult extends Component {
                 &nbsp;
                 <a
                   href="https://www.linkedin.com/in/${linkedIn}"
-                  style="color:rgb(52,63,79);margin-right:10px;text-decoration:none"
+                  style="display:inline-block;color:rgb(52,63,79);margin-right:10px;text-decoration:none"
                   target="_blank"
                 >
                   /in/${linkedIn}
                 </a>
-                &nbsp;
                 <img
                   src="https://ci3.googleusercontent.com/proxy/nWPfVeCBuLYU6LCPNUSsqL8VXX2gnEpH9qtxlq4dKVLcS79UKd9qB3L7AwgrcllGvw1NzDXjDsrONO9Dagc2Cjxex_en3ATZC7dYFzyVMMmB9d8RtYjJTgJY7VKTAqTyhOQSi0mwqOri37BywgkRdGr7w8RsnAqqqZ3mdvjj4hTLuUItefkYOoOsX1MHysaGu9HgxdGnS0xXivpZpGdJrw=s0-d-e1-ft#https://docs.google.com/uc?export=download&amp;id=1ADpXElsi-DoEbeuD3td_rn1y3QRazC1S&amp;revid=0BxKTdJnCbLzfVDhxQk01dktIa2tDQVc1SDNURzhGK2V3NDBVPQ"
                   alt="Twitter"
