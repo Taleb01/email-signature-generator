@@ -28,7 +28,7 @@ export class SignatureResult extends Component {
       &nbsp;
       <a
         href="https://twitter.com/${twitter}"
-        style="color:rgb(52,63,79); letter-spacing:.5px; text-decoration:none"
+        style="color:rgb(52,63,79); font-size: 10px; letter-spacing:.5px; text-decoration:none"
         target="_blank"
       >
         @${twitter}
@@ -113,7 +113,7 @@ export class SignatureResult extends Component {
                 &nbsp;
                 <a
                   href="mailto:${email}"
-                  style="color:rgb(52,63,79); letter-spacing:.5px; text-decoration:none"
+                  style="color:rgb(52,63,79); font-size:10px; letter-spacing:.5px; text-decoration:none"
                   target="_blank"
                 >
                   ${email}
